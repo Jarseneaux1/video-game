@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/video-game
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: video-game
+    password: video-game
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+  server:
+  port: 8081  # Correct   
+
