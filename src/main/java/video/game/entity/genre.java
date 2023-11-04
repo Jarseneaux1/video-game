@@ -1,10 +1,8 @@
 package video.game.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class genre {
@@ -12,9 +10,17 @@ public class genre {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "genre_id")
     private Long genreId;
-    
+
     @Column(name = "genre_name")
     private String genreName;
 
-    // Define relationships and getters/setters
+    @ManyToMany
+    @JoinTable(
+        name = "genre_name",
+        joinColumns = @JoinColumn(name = "genre_id"),
+        inverseJoinColumns = @JoinColumn(name = "game_id")
+    )
+    private List<game> games;
+
+    
 }

@@ -39,5 +39,5 @@ public class GenreController {
         genreService.deleteGenre(genreId);
     }
 
-    // Other endpoints can be added as needed
+    
 }

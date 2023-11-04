@@ -39,5 +39,5 @@ public class GamePlatformController {
         gamePlatformService.deleteGamePlatform(gamePlatformId);
     }
 
-    // Other endpoints can be added as needed
+   
 }

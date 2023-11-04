@@ -1,5 +1,6 @@
 package video.game.controller;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,10 +42,10 @@ public class VideoGameController {
 
 
 
-    // Other endpoints can be added as needed
+   
 
-    // Example: Retrieve all games for a specific genre
+}
    // @GetMapping("/genre/{genreId}")
   //  public List<game> getGamesByGenre(@PathVariable Long genreId) {
      //   return gameService.getGamesByGenre(genreId);
-    }
+    
