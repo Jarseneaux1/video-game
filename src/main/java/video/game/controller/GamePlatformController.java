@@ -9,33 +9,33 @@ import video.game.entity.platform;
 import video.game.service.GamePlatformService;
 
 @RestController
-@RequestMapping("/api/game-platforms")
+@RequestMapping("/api/game-platforms") // for ARC
 public class GamePlatformController {
     @Autowired
     private GamePlatformService gamePlatformService;
 
     @PostMapping
-    public platform createGamePlatform(@RequestBody platform gamePlatform) {
+    public platform createGamePlatform(@RequestBody platform gamePlatform) { //Create
         return gamePlatformService.createGamePlatform(gamePlatform);
     }
 
-    @GetMapping("/{gamePlatformId}")
+    @GetMapping("/{gamePlatformId}") //Read
     public platform getGamePlatformById(@PathVariable Long gamePlatformId) {
         return gamePlatformService.getGamePlatformById(gamePlatformId);
     }
 
     @GetMapping
-    public List<platform> getAllGamePlatforms() {
+    public List<platform> getAllGamePlatforms() { //Read
         return gamePlatformService.getAllGamePlatforms();
     }
 
     @PutMapping
-    public platform updateGamePlatform(@RequestBody platform gamePlatform) {
+    public platform updateGamePlatform(@RequestBody platform gamePlatform) { //Update
         return gamePlatformService.updateGamePlatform(gamePlatform);
     }
 
     @DeleteMapping("/{gamePlatformId}")
-    public void deleteGamePlatform(@PathVariable Long gamePlatformId) {
+    public void deleteGamePlatform(@PathVariable Long gamePlatformId) { //Delete
         gamePlatformService.deleteGamePlatform(gamePlatformId);
     }
 
