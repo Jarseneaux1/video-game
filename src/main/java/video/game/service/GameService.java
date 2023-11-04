@@ -14,7 +14,7 @@ import jakarta.transaction.Transactional;
 import video.game.entity.game;
 
 @Service
-public class GameService { // Moved to the top level and annotated with @Service
+public class GameService { 
     @PersistenceContext
     private EntityManager entityManager;
 
